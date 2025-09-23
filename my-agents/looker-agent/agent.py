@@ -5,6 +5,8 @@ toolbox = ToolboxSyncClient("http://127.0.0.1:5000")
 
 tools = toolbox.load_toolset('looker_tools')
 
+# tools = toolbox.load_tool('make_dashboard')
+
 root_agent = Agent(
     model='gemini-2.5-flash',
     name='looker_agent',
