@@ -1,9 +1,9 @@
 sources:
     looker-source:
         kind: looker
-        base_url: http://nubalia.cloud.looker.com
-        client_id: 3YwXp8CmR8ZmgwTQg9C2
-        client_secret: jMG5Y9CmT7ZDPRDYSnPTdjmF
+        base_url: ${BASE_URL}
+        client_id: ${LOOKER_CLIENT_ID}
+        client_secret: ${LOOKER_CLIENT_SECRET}
         verify_ssl: true
         timeout: 600s
 
@@ -24,7 +24,7 @@ tools:
 
           Output:
             - type: json
-              example: {"tile_id":"12","dashboard_id":"344","url":"https://nubalia.cloud.looker.com/dashboards/344#tile-12"}
+              example: {"tile_id":"12","dashboard_id":"344","url":"https://company.cloud.looker.com/dashboards/344#tile-12"}
 
     get_dashboards:
         kind: looker-get-dashboards
@@ -39,7 +39,7 @@ tools:
 
           Output:
             - type: json
-              example: [{"id":"344","title":"Sales Overview Q3","url":"https://nubalia.cloud.looker.com/dashboards/344"}]
+              example: [{"id":"344","title":"Sales Overview Q3","url":"https://company.cloud.looker.com/dashboards/344"}]
 
     get_dimensions:
         kind: looker-get-dimensions
@@ -99,7 +99,7 @@ tools:
 
           Output:
             - type: json
-              example: [{"id":"101","title":"Revenue by Region","url":"https://nubalia.cloud.looker.com/looks/101"}]
+              example: [{"id":"101","title":"Revenue by Region","url":"https://company.cloud.looker.com/looks/101"}]
 
     get_measures:
         kind: looker-get-measures
@@ -155,7 +155,7 @@ tools:
 
           Output:
             - type: json
-              example: {"id":"344","url":"https://nubalia.cloud.looker.com/dashboards/344"}
+              example: {"id":"344","url":"https://company.cloud.looker.com/dashboards/344"}
 
     make_look:
         kind: looker-make-look
@@ -170,7 +170,7 @@ tools:
 
           Output:
             - type: json
-              example: {"id":"101","url":"https://nubalia.cloud.looker.com/looks/101"}
+              example: {"id":"101","url":"https://company.cloud.looker.com/looks/101"}
 
     query:
         kind: looker-query
@@ -233,3 +233,4 @@ toolsets:
         - query
         - query_sql
         - run_look
+
