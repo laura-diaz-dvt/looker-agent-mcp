@@ -5,6 +5,7 @@ toolbox = ToolboxSyncClient("http://127.0.0.1:5000")
 
 tools = toolbox.load_toolset('looker_tools')
 
+# To import only one tool
 # tools = toolbox.load_tool('make_dashboard')
 
 root_agent = Agent(
