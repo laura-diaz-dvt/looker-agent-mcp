@@ -1,7 +1,7 @@
 from google.adk.agents import Agent
 from toolbox_core import ToolboxSyncClient
 
-toolbox = ToolboxSyncClient("http://127.0.0.1:5000")
+toolbox = ToolboxSyncClient("http://127.0.0.1:5000") #edit with your url
 
 tools = toolbox.load_toolset('looker_tools')
 
